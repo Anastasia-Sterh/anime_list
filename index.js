@@ -1,4 +1,6 @@
 
+
+
 let titles;
 const anime_list = async () => {
     const response_1 = await fetch('https://shikimori.one/api/animes?limit=50&order=popularity&page=1')
@@ -20,7 +22,7 @@ anime_list().then((result) => {
 });
 
 
-
+//import { add, save, render } from './dnevnik.js'; ЧТО ТО НЕ ТО
 
 const onButtonClick = function () {
     let text = document.querySelector('#left_section');
@@ -68,7 +70,7 @@ const onButtonClick = function () {
     btn_2.className = 'sliding-button';
     btn_2.style.marginTop = '25px';
     btn_2.innerText = 'Add to wishlist';
-    //btn_2.onclick = ;
+    btn_2.onclick = add;
 
     titles.splice(rand, 1)
 }
@@ -76,8 +78,3 @@ const onButtonClick = function () {
 document.querySelector('.sliding-button').onclick = onButtonClick;
 
 
-// Создать класс, где будет описание или оценка или картинка, в общем что-то, описывающее аниме.
-//Создать сто тыщ объектов, запихать их в массив и сделать все то же самое
-// сделать ссылку на мой дневник, сверстать там бог весть как что-то
-// можно записывать свои аниме просмотренные с помощью кнопочек и удалять их
-//наверное там надо будет сделать форму авторизации или типа того? Дневник оставим на попозже

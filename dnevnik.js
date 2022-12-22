@@ -10,6 +10,9 @@ function save() {
 }
 
 function load() {
+    if (localStorage.wantToSee == undefined || localStorage.alreadySeen == undefined) {
+        return;
+    }
     wantToSee = JSON.parse(localStorage.wantToSee)
     alreadySeen = JSON.parse(localStorage.alreadySeen)
 
@@ -124,6 +127,8 @@ function add() {
 
 }
 
+// export { add, save, render }; ТУТ ТОЖЕ ЧТО ТО НЕ ТО
+
 function delete_item(event) {
 
     let target = event.target;
@@ -146,15 +151,12 @@ function delete_item(event) {
 function delete_all(event) {
 
     let target = event.target;
-    console.log(target)
     let parent = target.parentNode;
     let parent_1 = parent.parentNode;
-    console.log(parent_1, 'родитель путки')
-    let btn_delete_all = document.querySelector('.btn_delete_all');
-    console.log(btn_delete_all.parentNode, 'родитель жмякнутой путки')
 
 
-    if (btn_delete_all.parentNode.classList.contains('list__right')) {
+
+    if (parent_1.classList.contains('list__right')) {
         alreadySeen.splice(0, alreadySeen.length);
 
     } else {
@@ -223,3 +225,8 @@ for (const el of btn_delete_all) {
     el.addEventListener('click', delete_all)
 
 }
+
+// импорт и экспорт все ломают нах
+// required input не работает в дневнике
+// удаление из alreadySeen не осуществляется
+// в пейджез не залился функционал дневника
