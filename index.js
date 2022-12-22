@@ -70,9 +70,26 @@ const onButtonClick = function () {
     btn_2.className = 'sliding-button';
     btn_2.style.marginTop = '25px';
     btn_2.innerText = 'Add to wishlist';
-    btn_2.onclick = add;
+    btn_2.onclick = () => { add_inLocalStorage(anime) };
 
     titles.splice(rand, 1)
+}
+
+
+function add_inLocalStorage(anime) {
+
+    let wantToSee = [];
+    if (localStorage.wantToSee != undefined) {
+        wantToSee = JSON.parse(localStorage.wantToSee)
+    }
+    wantToSee.push(anime.russian)
+    localStorage.wantToSee = JSON.stringify(wantToSee)
+
+
+
+
+
+    console.log(wantToSee)
 }
 
 document.querySelector('.sliding-button').onclick = onButtonClick;

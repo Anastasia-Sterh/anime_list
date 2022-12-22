@@ -133,7 +133,7 @@ h1 {
   text-transform: uppercase;
   overflow: hidden;
   letter-spacing: 2px;
-  transition: .8s cubic-bezier(.165, .84, .44, 1);
+  transition: .8s cubic-bezier(.165, .84, .44, 1), transform 220ms ease;
   background: #ff096c;
 }
 
@@ -160,6 +160,10 @@ h1 {
   height: 100%;
 }
 
+.sliding-button:active {
+  transform: scale(90%);
+}
+
 #new_anime {
   display: flex;
 
@@ -172,6 +176,12 @@ h1 {
 #new_anime_p {
   display: flex;
   flex-direction: column;
+  max-width: 400px;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 35px;
 }
 
 a {

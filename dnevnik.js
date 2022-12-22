@@ -10,11 +10,17 @@ function save() {
 }
 
 function load() {
-    if (localStorage.wantToSee == undefined || localStorage.alreadySeen == undefined) {
+    if (localStorage.wantToSee == undefined && localStorage.alreadySeen == undefined) {
         return;
+    } else if (localStorage.wantToSee == undefined) {
+        alreadySeen = JSON.parse(localStorage.alreadySeen)
+    } else if (localStorage.alreadySeen == undefined) {
+        wantToSee = JSON.parse(localStorage.wantToSee)
+    } else {
+        wantToSee = JSON.parse(localStorage.wantToSee)
+        alreadySeen = JSON.parse(localStorage.alreadySeen)
     }
-    wantToSee = JSON.parse(localStorage.wantToSee)
-    alreadySeen = JSON.parse(localStorage.alreadySeen)
+
 
 }
 
@@ -108,8 +114,7 @@ function add() {
     let cnt_input = parent.querySelector('input')
 
 
-
-    if (cnt_input.value == '') {
+    if (cnt_input.value.trim() == '') {
         alert('Пустое поле для лохов')
         return
     } else if (parent.classList.contains('list__right')) {
@@ -156,11 +161,12 @@ function delete_all(event) {
 
 
 
-    if (parent_1.classList.contains('list__right')) {
+
+    if (parent.classList.contains('list__right')) {
         alreadySeen.splice(0, alreadySeen.length);
 
     } else {
-        wantToSee.splice(0, wantToSee.length);  //шо за нах... о_О
+        wantToSee.splice(0, wantToSee.length);
 
     }
     save()
@@ -226,7 +232,6 @@ for (const el of btn_delete_all) {
 
 }
 
-// импорт и экспорт все ломают нах
+
 // required input не работает в дневнике
-// удаление из alreadySeen не осуществляется
-// в пейджез не залился функционал дневника
+
