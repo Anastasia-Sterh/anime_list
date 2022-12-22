@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    background: linear-gradient(to top left, powderblue, pink);
+    background-attachment: fixed;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    user-select: none;
+
+
+
+}
+
+.header {
+    display: flex;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: sans-serif;
+    max-height: max-content;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+#logo {
+    font-family: 'Secular One', sans-serif;
+    text-shadow: 1px 1px 1px red, 0 0 1em rgb(243, 136, 220), 0 0 0.1em rgb(150, 150, 240);
+    margin-left: 20px;
+
+
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px rgb(242, 130, 148);
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px rgb(95, 7, 22);
+    padding: 15px;
+}
+
+.new_h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px rgb(95, 7, 22);
+
+}
+
+.open_list {
+
+    width: 400px;
+    margin: 20px;
+    align-items: flex-start;
+    background-color: rgba(150, 150, 240, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 2px 2px rgb(69, 5, 66);
+    min-height: 300px;
+
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiners {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list {
+    margin: 40px;
+    height: 200px;
+    width: 400px;
+    background-color: rgba(150, 150, 240, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 2px 2px rgb(69, 5, 66);
+}
+
+.list:hover {
+    background-color: rgba(150, 150, 240, 0.6);
+}
+
+.list-1 {
+    width: 100%;
+    display: none;
+}
+
+.image_right {
+    padding-top: 60px;
+
+
+    /* width: 332px;
+    background-image: url(right.png);
+    align-self: stretch; */
+}
+
+.open_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.input {
+    background-color: rgba(150, 150, 240, 0);
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+}
+
+input[type='text'] {
+    font-size: 24px;
+    font-family: sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(35, 1, 7);
+
+}
+
+
+
+.btn {
+    font-weight: bolder;
+    font-size: 15px;
+    background-color: rgb(82, 23, 74);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+
+.btn_delete_all {
+    font-weight: bolder;
+    font-size: 15px;
+    background-color: rgb(82, 23, 74);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+
+.btn_delete_all:hover {
+    background-color: rgb(132, 49, 121);
+}
+
+.btn_delete_all:active {
+    background-color: rgb(175, 93, 164);
+}
+
+.btn:hover {
+    background-color: rgb(132, 49, 121);
+}
+
+.btn:active {
+    background-color: rgb(175, 93, 164);
+}
+
+.new_el {
+    font-size: 24px;
+    font-family: sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(35, 1, 7);
+    margin: 5px;
+    margin-left: 20px;
+    display: flex;
+
+}
+
+.new_el:hover {
+    color: purple;
+    text-shadow: 2px 2px 2px white;
+}
+
+.new_el:hover button {
+    display: inline-block;
+}
+
+.invalid {
+    border-bottom: 1px solid rgb(104, 27, 104);
+}
+
+.new_el_buttons {
+    font-weight: bold;
+    font-size: 13px;
+    background-color: rgb(82, 23, 74);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 3px 7px;
+    margin: 3px;
+    display: none;
+
+}
+
+.new_el_buttons:hover {
+    background-color: rgb(132, 49, 121)
+}
+
+.new_el_buttons:active {
+    background-color: rgb(175, 93, 164);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.border-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(251, 247, 247, 0.4);
+    background: none;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.border-button:before,
+.border-button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+.border-button:before {
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+}
+
+.border-button:after {
+    top: 0;
+    right: 0;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;
+}
+
+.border-button:hover:before,
+.border-button:hover:after {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.border-button:hover:before {
+    transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+}
+
+.border-button:hover:after {
+    transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;
+}
+
+.border-button:hover {
+    background: rgba(255, 255, 255, .2);
+}

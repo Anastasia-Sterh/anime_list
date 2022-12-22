@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dnevnik.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500&family=Secular+One&display=swap"
+        rel="stylesheet">
+    <title>Diary</title>
+
+</head>
+
+<body>
+    <header class='header'>
+
+        <a href="index.html"><button class="border-button">Random</button></a>
+    </header>
+
+    <section class="title">
+        <h1 data-myvariable="32">Best of your anime world</h1>
+    </section>
+
+    <section class="conteiners">
+
+        <!-- <section class="image_top"><img src="top.png"></section> !-->
+        <section class="cards">
+            <div class="list">
+                <h2>Want to see</h2>
+
+                <div class="list-1 list__left">
+
+                    <input class="input" type="text" required name="anime"> <!-- почему то поле выпендривается !-->
+                    <button class="btn">+</button>
+                    <button class=" btn_delete_all"> x </button>
+                </div>
+            </div>
+
+            <div class="list">
+                <h2>Already seen</h2>
+                <div class="list-1 list__right">
+                    <input class="input" type="text">
+                    <button class="btn">+</button>
+                    <button class=" btn_delete_all"> x </button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="image_right">
+            <img src="right.png" width="300px" height="500px">
+        </section>
+
+        <!-- <section class="image_bottom"> <img id="totoro" src='bottom.gif' height="100px" width="200px"> </section> -->
+
+    </section>
+
+    <script src="dnevnik.js"></script>
+</body>
+
+</html>
