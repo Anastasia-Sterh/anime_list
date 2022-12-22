@@ -188,3 +188,24 @@ a {
   text-decoration: none;
   color: rgb(66, 13, 54)
 }
+
+.anime_add_message {
+  height: 40px;
+  width: max-content;
+  background-color: white;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 3px;
+  border: 1px solid grey;
+  box-shadow: 1px 1px 4px black;
+  padding: 7px;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  display: none;
+
+}
+
+.anime_add_message a {
+  color: red;
+}

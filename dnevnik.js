@@ -115,7 +115,7 @@ function add() {
 
 
     if (cnt_input.value.trim() == '') {
-        alert('Пустое поле для лохов')
+        alert('Кажется, чего-то не хватает... ')
         return
     } else if (parent.classList.contains('list__right')) {
         alreadySeen.push(cnt_input.value);
@@ -132,7 +132,6 @@ function add() {
 
 }
 
-// export { add, save, render }; ТУТ ТОЖЕ ЧТО ТО НЕ ТО
 
 function delete_item(event) {
 
@@ -233,5 +232,4 @@ for (const el of btn_delete_all) {
 }
 
 
-// required input не работает в дневнике
 

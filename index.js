@@ -22,7 +22,7 @@ anime_list().then((result) => {
 });
 
 
-//import { add, save, render } from './dnevnik.js'; ЧТО ТО НЕ ТО
+
 
 const onButtonClick = function () {
     let text = document.querySelector('#left_section');
@@ -49,7 +49,7 @@ const onButtonClick = function () {
         </div>
     `;
 
-    //text.innerText = anime.name;
+
     text.style.fontSize = '20px';
 
     console.log(titles[rand]);
@@ -82,8 +82,36 @@ function add_inLocalStorage(anime) {
     if (localStorage.wantToSee != undefined) {
         wantToSee = JSON.parse(localStorage.wantToSee)
     }
-    wantToSee.push(anime.russian)
-    localStorage.wantToSee = JSON.stringify(wantToSee)
+
+
+
+    if (wantToSee.includes(anime.russian) == true) {
+        alert('Вы уже добавили это аниме!')
+    } else {
+        wantToSee.push(anime.russian)
+        localStorage.wantToSee = JSON.stringify(wantToSee)
+
+        let window_message = document.querySelector('.anime_add_message')
+        window_message.style.display = 'block';
+        // window_message.classList.add('animate__animated')
+        window_message.classList.add('animate__fadeInUpBig')
+
+
+        setTimeout(() => {
+
+            window_message.classList.remove('animate__fadeInUpBig')
+            window_message.classList.add('animate__fadeOutDownBig')
+        }, 4000);
+
+        setTimeout(() => {
+            window_message.style.display = 'none';
+            window_message.classList.remove('animate__fadeOutDownBig')
+
+        }, 8000);
+    };
+
+
+
 
 
 
